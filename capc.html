@@ -1,18 +1,35 @@
 <html>
 <head>
-    <title>Hello World !</title>
+    <title>DataViz</title>
     <meta charset="UTF-8" /> 
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+      <!-- https://www.datavis.fr/index.php?page=word-cloud -->
 </head>
 <body>
-    <!-- https://www.datavis.fr/index.php?page=word-cloud -->
-    <h1>Word clouds sample with d3.js</h1>
-    <div id="container">
-        <div id="word-cloud">
+
+    <div class="container" id="container">
+    <div class="col section"  style="text-align: center;background-color:#E5E6E0; background-image: url('../img/art.jpg');background-repeat: no-repeat;">
+    <h1 style="font-weight:bold;">Collections du CAPC</h1>
+    <h2 style="font-weight:bold;">Types d'oeuvres d'art</h2>
+</div>
+  <div class="divider"></div>
+    
+        <div class="row blue-grey lighten-5"  style="text-align: center;margin-bottom255px;" id="word-cloud">
         
         </div>
+        <div class="divider "></div>
+        Données  : <a targe="_blank" href="https://opendata.bordeaux-metropole.fr/">OpenData Bordeaux Métropole</a>
+        <br />Dataviz : Gallien LABEYRIE
     </div>
- 
+
+
 </body>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     
 <script src="js/d3.v5.min.js"></script>
 <script src="js/d3.layout.cloud.js"></script>
 <script src="js/capc-dataviz.js"></script>

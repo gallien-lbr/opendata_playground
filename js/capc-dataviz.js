@@ -1,10 +1,10 @@
-const width = document.getElementById("container").offsetWidth * 0.95,
+const width = document.getElementById("container").offsetWidth * 0.85,
     height = 500,
     fontFamily = "Open Sans",
-    fontScale = d3.scaleLinear().range([20, 120]), // Construction d'une échelle linéaire continue qui va d'une font de 20px à 120px
+    fontScale = d3.scaleLinear().range([20, 100]), // Construction d'une échelle linéaire continue qui va d'une font de 20px à 120px
     fillScale = d3.scaleOrdinal(d3.schemeCategory10); // Construction d'une échelle discrète composée de 10 couleurs différentes
 
-let f  = "../data/wordsCount.csv";
+let f  = "../data/bor_capc.csv";
 let words = [];
 
 d3.csv(f).then(function(csv) {
@@ -46,6 +46,7 @@ function draw() {
             .enter().append("text") // Ajout de chaque mot avec ses propriétés
                 .style("font-size", function(d) { return d.size + "px"; })
                 .style("font-family", fontFamily)
+                .style("font-weight","bold")
                 .style("fill", function(d, i) { return fillScale(d.size); })
                 .attr("text-anchor", "middle")
                 .attr("transform", function(d) { return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"; })
