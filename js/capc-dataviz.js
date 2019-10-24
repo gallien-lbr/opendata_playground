@@ -1,10 +1,11 @@
-const width = document.getElementById("container").offsetWidth * 0.85,
-    height = 500,
+const width = document.getElementById("container").offsetWidth * 0.65,
+    height = 600,
     fontFamily = "Open Sans",
-    fontScale = d3.scaleLinear().range([20, 100]), // Construction d'une échelle linéaire continue qui va d'une font de 20px à 120px
+    fontScale = d3.scaleLinear().range([10, 75]), // Construction d'une échelle linéaire continue qui va d'une font de 20px à 120px
     fillScale = d3.scaleOrdinal(d3.schemeCategory10); // Construction d'une échelle discrète composée de 10 couleurs différentes
 
-let f  = "../data/bor_capc.csv";
+let rep  = "../data/";
+let f = rep + "countries.csv";
 let words = [];
 
 d3.csv(f).then(function(csv) {
