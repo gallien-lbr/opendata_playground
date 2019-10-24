@@ -1,17 +1,15 @@
 <html>
 <head>
-    <title>DataViz</title>
+    <title>GoRabbit.xyz - DataViz - Words Cloud Demo</title>
     <meta charset="UTF-8" /> 
-    
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-      <!-- https://www.datavis.fr/index.php?page=word-cloud -->
+    <!-- https://www.datavis.fr/index.php?page=word-cloud -->
 </head>
 <body>
 
     <div id="container">
-        <div class="col section black"  style=" color:white;text-align: center;">
+        <div class="col section teal darken-4"  style=" color:white;text-align: center;">
         <h1 style="font-weight:bold;">Most populated contries in European Union</h1>
         </div>
         <div class="row blue-grey lighten-5"  style="text-align: center;" id="word-cloud">
@@ -19,16 +17,21 @@
         </div>
         <div class="divider"></div>
         <p style="text-align:center;">Data:&nbsp;<a targe="_blank" href="https://en.wikipedia.org/wiki/List_of_European_Union_member_states_by_population">Wikipedia</a>
-        <br />Dataviz : Gallien LABEYRIE
+        <br /><a href="https://d3js.org/">Demo made with D3.js 🚀</a>
         </p>
     </div>
 
 
-</body>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-     
+</body>   
 <script src="js/d3.v5.min.js"></script>
 <script src="js/d3.layout.cloud.js"></script>
-<script src="js/capc-dataviz.js"></script>
+<script src="js/wordscloud-dataviz.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133452024-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-133452024-2');
+</script>
 </html>
